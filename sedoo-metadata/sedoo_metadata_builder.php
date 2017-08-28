@@ -219,7 +219,7 @@ class sedoo_metadata_builder{
 	}
 
 	public function dataPolicy($name, $url = null, $registrationNeeded = true){
-		$this->dats->dataPolicy= new sedoo_metadata_data_policy($url, $name, $registrationNeeded);
+		$this->dats->dataPolicy= new sedoo_metadata_data_policy($name, $url, $registrationNeeded);
 		return $this;
 	}
 	
