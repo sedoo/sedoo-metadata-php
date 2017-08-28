@@ -64,6 +64,19 @@ function xmlIsoToSedooMetadata($xmlFile){
 	return null;
 }
 
+function sedooMetadataRandomUUID($indexName, $dataset){
+	$uuid = file_get_contents(SEDOO_METADATA_SERVICES_UUID);
+	if ($uuid){
+		return $uuid;
+	}else{
+		$uuid = file_get_contents(AERIS_METADATA_SERVICES_UUID);
+		if ($uuid){
+			return $uuid;
+		}
+	}
+	return null;
+}
+
 //??
 function sedooMetadataIndexDataset($indexName, $dataset){
 	if (isset($dataset)){
